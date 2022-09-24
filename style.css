@@ -1,0 +1,102 @@
+/* declaring color variables */
+/* Change the colour variables to fix other occurrence all at once */
+:root {
+    --dark: #05303c;
+    --light: #0aebe0;
+  }
+
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--dark);
+    transition: 0.2s;
+}
+
+a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    height: 4rem;
+    width: 20rem;
+    font-size: 2rem;
+    letter-spacing:6px;
+    font-family: canolas;
+    background-color: var(--dark);
+    text-decoration: none;
+    color: var(--light);
+    overflow: hidden;
+    border-radius: 0;
+    border: none;
+    transition: 0.2s;
+
+    
+}
+
+a:hover
+{
+    color: var(--dark);
+    background: var(--light);
+    box-shadow: 0 0 10px var(--light), 0 0 40px var(--light), 0 0 80px var(--light);
+    transition-delay: 1s;
+
+
+}
+
+a span:nth-child(1){
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, transparent, var(--light));
+}
+a:hover span:nth-child(1){
+    left: 100%;
+    transition: 1s;
+}
+
+a span:nth-child(3){
+    position: absolute;
+    bottom: 0%;
+    left: 100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to left,transparent, var(--light));
+}
+a:hover span:nth-child(3){
+    left: -100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+}
+
+a span:nth-child(2){
+    position: absolute;
+    height: 100%;
+    width: 2px;
+    top: -100%;
+    right: 0%;
+    background: linear-gradient(to bottom, transparent, var(--light));
+}
+a:hover span:nth-child(2){
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+}
+
+a span:nth-child(4){
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    height: 100%;
+    width: 2px;
+    background: linear-gradient(to top, transparent, var(--light));
+}
+a:hover span:nth-child(4){
+    top: -100%;
+    transition: 1s;
+    transition-delay: 0.75s;
+}
